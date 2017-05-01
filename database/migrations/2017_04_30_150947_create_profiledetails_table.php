@@ -13,7 +13,21 @@ class CreateProfiledetailsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('profiledetails', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('serviceprovider_id')->unsigned();
+            $table->string('avatar');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('address');
+
+            $table->foreign('serviceprovider_id')
+                ->references('id')->on('serviceproviders')
+                ->ondelete('cascade');
+
+
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +37,6 @@ class CreateProfiledetailsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('profiledetails');
     }
 }

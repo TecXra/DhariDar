@@ -30,6 +30,6 @@ class CreateServiceprovidersTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('serviceproviders');
     }
 }
