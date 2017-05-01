@@ -1,5 +1,5 @@
 <?php
-
+use App\Serviceprovider;
 use Illuminate\Database\Seeder;
 
 class ServiceprovidersTableSeeder extends Seeder

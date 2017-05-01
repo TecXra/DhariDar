@@ -1,5 +1,5 @@
 <?php
-
+use App\Siteuser;
 use Illuminate\Database\Seeder;
 
 class SiteusersTableSeeder extends Seeder
