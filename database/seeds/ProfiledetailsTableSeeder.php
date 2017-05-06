@@ -13,7 +13,7 @@ class ProfiledetailsTableSeeder extends Seeder
     public function run()
     {
     	    ProfileDetail::create([
-			'avatar' => null,
+			'avatar' => 'null',
 			'first_name' => 'Haider',
 			'last_name' => 'ali',
 			'address' => 'lahore',
@@ -21,7 +21,7 @@ class ProfiledetailsTableSeeder extends Seeder
  		]);
 
     	    ProfileDetail::create([
-			'avatar' => null,
+			'avatar' => 'null',
 			'first_name' => 'Zeeshan',
 			'last_name' => 'Nawaz',
 			'address' => 'lahore',
@@ -29,7 +29,7 @@ class ProfiledetailsTableSeeder extends Seeder
  		]);
 
     	    ProfileDetail::create([
-			'avatar' => null,
+			'avatar' => 'null',
 			'first_name' => 'Saleem',
 			'last_name' => 'Naveed',
 			'address' => 'lahore',
@@ -37,7 +37,7 @@ class ProfiledetailsTableSeeder extends Seeder
  		]);
 
     	    ProfileDetail::create([
-			'avatar' => null,
+			'avatar' => 'null',
 			'first_name' => 'Mohsin',
 			'last_name' => 'Bajwa',
 			'address' => 'lahore',
@@ -45,7 +45,7 @@ class ProfiledetailsTableSeeder extends Seeder
  		]);
 
     	    ProfileDetail::create([
-			'avatar' => null,
+			'avatar' => 'null',
 			'first_name' => 'Ahsan',
 			'last_name' => 'Mehmood',
 			'address' => 'lahore',
