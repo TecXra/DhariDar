@@ -8,7 +8,7 @@ class Serviceprovider extends Model
 {
 	public function profiledetails()
 	{
-		return $this->belongsTo('App\Profiledetail');
+		return $this->hasOne('App\Profiledetail'); 
 	}
 	public function categories()
 	{

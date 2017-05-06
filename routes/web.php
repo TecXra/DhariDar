@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::get('index','HomeController@index');
 Route::get('/user','MainController@users');
+Route::get('/serviceprovider','MainController@serviceProviders');
+Route::get('/profile/{id}','MainController@profileOfServiceProvider');
+Route::get('/category/{id}','MainController@CategoriesOfUser');
+Route::get('/all_categories','MainController@AllCategories');

@@ -8,6 +8,6 @@ class Profiledetail extends Model
 {
     public function serviceproviders()
     {
-    	return $this->hasMany('App\Serviceprovider');
+    	return $this->belongsTo('App\Serviceprovider');
     }
 }

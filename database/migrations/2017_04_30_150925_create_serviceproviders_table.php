@@ -16,9 +16,13 @@ class CreateServiceprovidersTable extends Migration
         Schema::create('serviceproviders', function (Blueprint $table) {
             $table->increments('id');
             $table->string('phone_number');
+	    $table->integer('category_id')->unsigned();
             $table->string('password');
             $table->string('lang');
-            $table->string('lat');            
+            $table->string('lat');  
+	    $table->foreign('category_id')
+                ->references('id')->on('categories')
+                ->ondelete('cascade');          
             $table->timestamps();
         });
     }
