@@ -7,6 +7,7 @@ use App\Siteuser;
 use App\Serviceprovider;
 use App\Profiledetail;
 use App\Category;
+use DB;
 class MainController extends Controller
 {
      public function users(){
@@ -19,7 +20,11 @@ class MainController extends Controller
 
      public function profileOfServiceProvider($id){
      	//$id =2;
-     	return Serviceprovider::find($id)->profiledetails;
+return DB::table('categories')
+            ->join('serviceproviders', 'categories.id', '=', 'serviceproviders.category_id')
+            ->join('profiledetails', 'serviceproviders.id', '=', 'profiledetails.serviceprovider_id')
+            ->select('*')
+            ->where('categories.id', '=', $id)->get();
 
      }
 
