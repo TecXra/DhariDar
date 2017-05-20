@@ -20,11 +20,11 @@ class MainController extends Controller
 
      public function profileOfServiceProvider($id){
      	//$id =2;
-return DB::table('categories')
-            ->join('serviceproviders', 'categories.id', '=', 'serviceproviders.category_id')
+
+return Category::join('serviceproviders', 'categories.id', '=', '                      serviceproviders.category_id')
             ->join('profiledetails', 'serviceproviders.id', '=', 'profiledetails.serviceprovider_id')
             ->select('*')
-            ->where('categories.id', '=', $id)->get();
+            ->where('categories.id', '=', $id)->first();
 
      }
 
