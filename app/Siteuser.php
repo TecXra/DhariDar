@@ -10,4 +10,9 @@ class Siteuser extends Model
 'phone_number',
 'password',
     ];
+
+    public function request()
+	{
+		return $this->hasMany('App\Request');
+	}
 }

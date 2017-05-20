@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
          $this->call(ServiceprovidersTableSeeder::class);
          
           $this->call(ProfiledetailsTableSeeder::class);
-    }
+            $this->call(RequestTableSeeder::class);
+      }
   
 
 }

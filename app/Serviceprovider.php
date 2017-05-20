@@ -14,4 +14,8 @@ class Serviceprovider extends Model
 	{
 		return $this->belongsTo('App\Category');
 	}
+	public function request()
+	{
+		return $this->hasMany('App\Request');
+	}
 }

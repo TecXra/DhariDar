@@ -37,4 +37,15 @@ return Category::join('serviceproviders', 'categories.id', '=', '               
      	return Category::all();
      	
      }
+
+
+public function siteUserRequest($id){
+          //$id =2;
+
+return DB::table('requests')->join('siteusers', 'siteusers.id', '=','requests.site_user_id')->join('serviceproviders', 'serviceproviders.id', '=','requests.service_provider_id')
+            ->select('*')
+            ->where('siteusers.id', '=', $id)->get();
+
+     }
+
 }

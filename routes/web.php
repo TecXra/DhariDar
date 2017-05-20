@@ -21,3 +21,4 @@ Route::get('/serviceprovider','MainController@serviceProviders');
 Route::get('/profile/{id}','MainController@profileOfServiceProvider');
 Route::get('/category/{id}','MainController@CategoriesOfUser');
 Route::get('/all_categories','MainController@AllCategories');
+Route::get('/site_user_request/{id}','MainController@siteUserRequest');
